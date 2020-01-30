@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   final Function snackBar = (text, status) {
     return SnackBar(
       content: Text(text),
+      duration: Duration(milliseconds: 500),
       backgroundColor: status ? Colors.green[400] : Colors.red[400],
     );
   };

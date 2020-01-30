@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tickety_app/src/fade_animation.dart';
 import 'package:tickety_app/src/pages/auth/auth_layout.dart';
 import 'package:tickety_app/src/services/auth.dart';
 
@@ -66,7 +67,7 @@ class _RegisterPageState extends State<RegisterPage> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                 child: Center(
-                  child: Column(
+                  child: FadeAnimation(delay:1.5, child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Text(
@@ -79,7 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       )
                     ],
-                  )
+                  ))
                 ),
               ),
               SizedBox(height: 20),
@@ -97,7 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     child: ListView(
                       children: <Widget>[
                         SizedBox(height: 40),
-                        Container(
+                        FadeAnimation(delay:1.6, child: Container(
                           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                           decoration: AuthLayout.mainBox(),
                           child: Column(
@@ -131,16 +132,16 @@ class _RegisterPageState extends State<RegisterPage> {
                               ),
                             ],
                           ),
-                        ),
+                        )),
                         SizedBox(height: 40),
-                        AuthLayout.actionButton('Continue', onSignup),
+                        FadeAnimation(delay:1.7, child: AuthLayout.actionButton('Continue', onSignup)),
                         SizedBox(height: 20),
-                        FlatButton(
+                        FadeAnimation(delay:1.8, child: FlatButton(
                           onPressed: (){
                             Navigator.pushNamed(context, '/login');
                           },
                           child: Text("Login", style: TextStyle(color:  Colors.teal[300], fontSize: 15, fontWeight: FontWeight.w500)),
-                        ),
+                        )),
                       ],
                     ),
                   ),

@@ -39,7 +39,7 @@ class AuthLayout {
       boxShadow: [
         BoxShadow(
           color: Colors.teal[50],
-          blurRadius: 20,
+          blurRadius: 15,
           offset: Offset(0, 10)
         )
       ]

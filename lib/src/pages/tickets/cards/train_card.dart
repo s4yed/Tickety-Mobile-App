@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tickety_app/src/fade_animation.dart';
 
 class TrainCard extends StatelessWidget {
   final ticket;
@@ -14,7 +15,7 @@ class TrainCard extends StatelessWidget {
     final String date = ticket['date_time'].toString().split(' ').sublist(0,3).join(' ');
     return Container(
       padding: EdgeInsets.only(top: 10),
-      child: Card(
+      child: FadeAnimation(delay:1.5, child: Card(
         color: Colors.grey[200],
         child: Padding(
           padding: const EdgeInsets.all(15),
@@ -54,7 +55,7 @@ class TrainCard extends StatelessWidget {
             ],
           ),
         ),
-      )
+      ))
     );
   }
 }

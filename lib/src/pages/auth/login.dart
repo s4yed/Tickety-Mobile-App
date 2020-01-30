@@ -1,3 +1,4 @@
+import 'package:tickety_app/src/fade_animation.dart';
 import 'package:tickety_app/src/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:tickety_app/src/pages/auth/auth_layout.dart';
@@ -54,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                 child: Center(
-                  child: Column(
+                  child: FadeAnimation(delay: 1.5, child: Column(
                     children: <Widget>[
                       Text(
                         "Login",
@@ -66,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(color: Colors.white, fontSize: 15),
                       )
                     ],
-                  )
+                  ))
                 ),
               ),
               SizedBox(height: 40),
@@ -85,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
                       primary: true,
                       children: <Widget>[
                         SizedBox(height: 40),
-                        Container(
+                        FadeAnimation(delay: 1.6,child: Container(
                           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                           decoration: AuthLayout.mainBox(),
                           child: Column(
@@ -103,18 +104,18 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ],
                           ),
-                        ),
+                        )),
                         SizedBox(height: 40),
-                        Center(child: Text('Forgot Password?', style: TextStyle(color: Colors.grey))),
+                        FadeAnimation(delay: 1.7, child: Center(child: Text('Forgot Password?', style: TextStyle(color: Colors.grey)))),
                         SizedBox(height: 40),
-                        AuthLayout.actionButton('Login', onLogin),
+                        FadeAnimation(delay:1.8, child: AuthLayout.actionButton('Login', onLogin)),
                         SizedBox(height: 40),
-                        FlatButton(
+                        FadeAnimation(delay:1.9, child: FlatButton(
                           onPressed: (){
                             Navigator.pushNamed(context, '/register');
                           },
                           child: Text('Create an account', style: TextStyle(color: Colors.teal[300], fontSize: 15, fontWeight: FontWeight.w500)),
-                        ),
+                        )),
                       ],
                     ),
                   ),

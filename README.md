@@ -1,6 +1,6 @@
 # Tickety Mobile App
 
-A new Flutter application for [Tickety](https://github.com/ah-sayed/Tickety) system.
+A new Flutter application for [Tickety](https://github.com/ah-sayed/React-Tickety-System) system.
 
 ## Features:
 
@@ -28,13 +28,14 @@ A new Flutter application for [Tickety](https://github.com/ah-sayed/Tickety) sys
 ## Getting Started
 
 1. First thing you need to install **Android SDK** and clone the repo.
-2. Install **Flutter** and run the API then run the application.
+2. Install **Flutter** and run the [API](https://github.com/ah-sayed/React-Tickety-System/tree/backend) then run the application.
 
 ## Liberaries
 
 -   [HTTP.](https://pub.dev/packages/http)
 -   [Shared Preferences.](https://pub.dev/packages/shared_preferences)
 -   [Flutter Spin Kit.](https://pub.dev/packages/flutter_spinkit)
+-   [Simple Animation.](https://pub.dev/packages/simple_animations)
 
 ## Learn More
 

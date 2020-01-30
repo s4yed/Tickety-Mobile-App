@@ -18,6 +18,7 @@ class _UserTicketPageState extends State<UserTicketPage> {
   final Function snackBar = (text, status) {
     return SnackBar(
       content: Text(text),
+      duration: Duration(milliseconds: 500),
       backgroundColor: status ? Colors.green[400] : Colors.red[400],
     );
   };
@@ -35,13 +36,13 @@ class _UserTicketPageState extends State<UserTicketPage> {
   void removeTrain(id) {
     UserService.removeTicket({'ticket_id': id}).then((data) {
       if(data != false) {
+        setState(() {
+          tickets.removeWhere((val) => val['_id'] == id);
+        });
         _scaffoldKey.currentState.showSnackBar(snackBar('Ticket deleted successfully', true));
       }else {
         _scaffoldKey.currentState.showSnackBar(snackBar('Something is wrong', false));
       }
-    });
-    setState(() {
-      tickets.removeWhere((val) => val['_id'] == id);
     });
   }
 
